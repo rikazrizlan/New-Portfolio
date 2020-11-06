@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.home {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    background-color: #fff;
+}
+
+.sidenav {
+    display: grid;
+    grid-template-rows: 150px 80px 300px 50px;
+    align-items: center;
+    justify-content: left;
+    border-right: 3px solid rgb(150, 121, 94);
+    height: 94vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    margin-left: 5vh;
+}
+
+.main {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.main .txt-bx {
+    font-size: 1.2em;
+    margin-left: 50px;
+    max-width: 50%;
+}
+
+.sidenav .logo {
+    width: 130px;
+    height: 130px;
+    align-self: flex-end;
+    justify-content: flex-end;
+}
+
+h3{
+    align-self: flex-start;
+    font-size: 1.5em;
+    padding-top: 20px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px;
+}
+
+span {
+    font-size: 0.8em;
+    font-weight: lighter;
+}
+
+.social-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 15px);
+    justify-content: left;
+    column-gap: 15px;
+    list-style: none;
+    align-self: flex-end;
+}
+
+.social-icons img {
+    max-width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    text-align: left;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 20px);
+    grid-row-gap: 25px;
+}
+
+.project-links {
+    list-style: none;
+    text-align: left;
+    list-style: none;
+    font-weight: bold;
+}
+
+.project-links li a img{
+    max-width: 15px;
+    align-self: center;
+    filter: invert(1);
+}
+
+.nav-links li a{
+    color: black;
+}
+
+.nav-links li{
+    cursor: pointer;
+    font-size: 1.2em;
+    letter-spacing: 1.8px;
+    transition: 0.5s ease all;
+}
+
+.nav-links li:hover {
+    text-decoration: underline;
+}
+
+.form-group{
+    font-size: 1.2em;
+}
+
+.form-group input, .form-group textarea {
+    font-size: 1.2em;
+    border: 1px solid rgb(150, 121, 94);
+}
+
+.img-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 60px;
+    align-self: center;
+}
+
+.img-container img {
+    max-width: 80%;
+    border-radius: 10%;
+    align-self: center;
+}
+
+@media (max-width: 770px) {
+    .home {
+        grid-template-columns: 40% 60%;
+        max-height: 100vh;
+        overflow: hidden;
+    }
+    .main .txt-bx {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 500px) {
+    .home {
+        max-height: 100vh;
+        overflow: hidden;
+    }
+    .txt-bx, .main {
+        font-size: 0.8em;
+        margin-right: 5px;
+        max-width: 100%;
+        max-height: 50vh;
+    }
+    .home .logo {
+        align-self: flex-start;
+        width: 50px;
+        height: 50px;
+    }
+    .sidenav {
+        grid-template-rows: 50px 50px 300px 50px 50px;
+        max-height: 100vh;
+        border-right: 1px solid  rgb(150, 121, 94);
+    }
+    .sidenav h3{
+        font-size: 1em;
+        align-self: flex-start;
+    }
+    .sidenav span{
+        font-size: 0.6em;
+    }
+    .nav-links {
+        align-self: center;
+        font-size: 0.6em;
+        row-gap: 10px;
+    }
+    .social-icons {
+        grid-row: 5/6;
+        align-self: flex-end;
+        grid-template-columns: repeat(3, 8px);
+    }
+    .form-group{
+        font-size: 1em;
+    }
+    .form-group input, .form-group textarea {
+        font-size: 0.6em;
+        border: 1px solid rgb(150, 121, 94);
+    }
+    .project-links {
+        font-size: 0.8em;
+    }
+
+    .project-links .btn {
+        font-size: 0.8em;
+    }
+    
+    .project-links li a img{
+        max-width: 15px;
+        align-self: center;
+        filter: invert(1);
+    }
+    .img-container img {
+        max-width: 100%;
+        background: none;
+        align-self: center;
+        padding: 0;
+        border-radius: 10%;
+    }
+    .mode-btn {
+        top: 5px;
+        right: 10px;
+        padding: 2px 5px;
+        color: white;
+        cursor: pointer;
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+}
+
+.mode-btn {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    padding: 5px 10px;
+    background-color: rgb(150, 121, 94);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+    filter: invert(0);
+}
