@@ -248,3 +248,7 @@ span {
     color: white;
     filter: invert(0);
 }
+
+.dark-nav{
+    color: white;
+}

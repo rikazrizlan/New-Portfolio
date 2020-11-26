@@ -2,7 +2,7 @@
 const modeBtn = document.querySelector('.mode-btn');
 
 modeBtn.addEventListener('click', () =>{
-    const grandParent  = modeBtn.parentElement.parentElement;
+    const grandParent  = modeBtn.parentElement.firstElementChild;
     grandParent.classList.toggle('dark-mode');
     if(grandParent.classList.contains("dark-mode")) {
         modeBtn.innerText = "Lignt Mode";
@@ -15,7 +15,6 @@ modeBtn.addEventListener('click', () =>{
         navLinks.classList.add('dark-mode')
     } else {
         modeBtn.innerText = "Dark Mode";
-    }
-    
-})
+    }  
+});
 */
